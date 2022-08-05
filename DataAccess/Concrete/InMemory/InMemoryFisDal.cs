@@ -50,7 +50,6 @@ namespace DataAccess.Concrete.InMemory
             fisToUpdate.Gorsel= fis.Gorsel;
             fisToUpdate.Kdv= fis.Kdv;
             fisToUpdate.ToplamFis= fis.ToplamFis;
-            // eren boş yapma
         }
     }
 }
