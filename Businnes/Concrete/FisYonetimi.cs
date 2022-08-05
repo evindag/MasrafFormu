@@ -1,6 +1,7 @@
 ﻿using Businnes.Abstract;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +12,16 @@ namespace Businnes.Concrete
 {
     public class FisYonetimi : IFisService
     {
-        IFisDal fisDal;
+        IFisDal _fisDal;
 
         public FisYonetimi(IFisDal fisDal)
         {
-            this.fisDal = fisDal;
+            _fisDal = fisDal;
         }
 
         public List<Fis> GetAll()
         {
-            
+            return _fisDal.GetAll();
         }
     }
 }

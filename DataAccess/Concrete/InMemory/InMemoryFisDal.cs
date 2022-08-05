@@ -15,7 +15,11 @@ namespace DataAccess.Concrete.InMemory
         {
             _fisler = new List<Fis>
              {
-                 
+                new Fis{FisId=1},
+                new Fis{FisId=2},
+                new Fis{FisId=3},
+                new Fis{FisId=4},
+
              };
         }
         public void Add(Fis fis)
