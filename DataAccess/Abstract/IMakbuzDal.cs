@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface IFisDal:IEntityRepository<Fis>
+    public interface IMakbuzDal:IEntityRepository<Makbuz>
     {
       
     }

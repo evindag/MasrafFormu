@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    internal class Makbuz:IEntity
+    public class Makbuz:IEntity
     {
-        public int MakbuzId { get; set; }
+        public string MakbuzId { get; set; }
         public int Tarih { get; set; }
         public double MakbuzTutari { get; set; }
         public string MakbuzAciklamasi { get; set; }

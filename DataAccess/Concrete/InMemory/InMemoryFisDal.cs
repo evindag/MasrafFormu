@@ -3,6 +3,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,10 +16,10 @@ namespace DataAccess.Concrete.InMemory
         {
             _fisler = new List<Fis>
              {
-                new Fis{FisId=1},
-                new Fis{FisId=2},
-                new Fis{FisId=3},
-                new Fis{FisId=4},
+                new Fis{FisId="1"},
+                new Fis{FisId="2"},
+                new Fis{FisId="3"},
+                new Fis{FisId="4"},
 
              };
         }
@@ -33,14 +34,29 @@ namespace DataAccess.Concrete.InMemory
             _fisler.Remove(fisToDelete);   
         }
 
+        public Fis Get()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Fis> GetAll()
         {
             return _fisler;
         }
 
-        public List<Fis> GetAllById(int id)
+        public List<Fis> GetAll(Expression<Func<Fis, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Fis> GetAllById(string id)
         {
             return _fisler.Where(f =>f.FisId==id).ToList();
+        }
+
+        public List<Fis> GetAllById(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Fis fis)
