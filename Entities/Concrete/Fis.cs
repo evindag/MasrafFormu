@@ -9,7 +9,7 @@ namespace Entities.Concrete
 {
     public class Fis:IEntity
     {
-        public string FisId { get; set; } 
+        public int FisId { get; set; } 
         public int BelgeTarihi { get; set; }
         public int FisNo { get; set; }
         public string Firma { get; set; }
@@ -18,5 +18,6 @@ namespace Entities.Concrete
         public double ToplamFis { get; set; }
         public double Kdv { get; set; }
         public string Gorsel { get; set; }
+        public string Kisi { get; set; }
     }
 }

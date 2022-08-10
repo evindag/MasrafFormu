@@ -23,5 +23,25 @@ namespace Businnes.Concrete
         {
             return _fisDal.GetAll();
         }
+
+        public List<Fis> GetAllFisId(int id)
+        {
+            return _fisDal.GetAll(f => f.FisId == id);
+        }
+
+        public List<Fis> GetByBelgeTarihi(decimal min, decimal max)
+        {
+            return _fisDal.GetAll(f => f.BelgeTarihi <= min && f.BelgeTarihi <= max);
+        }
+
+        public List<Fis> GetByFisTuru(string name)
+        {
+            return _fisDal.GetAll(f => f.FisTuru == name);
+        }
+
+        public List<Fis> GetByKisi(string name)
+        {
+            return _fisDal.GetAll(f => f.Kisi == name);
+        }
     }
 }

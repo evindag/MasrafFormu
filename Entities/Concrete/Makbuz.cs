@@ -9,7 +9,7 @@ namespace Entities.Concrete
 {
     public class Makbuz:IEntity
     {
-        public string MakbuzId { get; set; }
+        public int MakbuzId { get; set; }
         public int Tarih { get; set; }
         public double MakbuzTutari { get; set; }
         public string MakbuzAciklamasi { get; set; }
@@ -18,5 +18,6 @@ namespace Entities.Concrete
 
         public string YetkiliAd { get; set; }
         public string Adres { get; set; }
+
     }
 }
