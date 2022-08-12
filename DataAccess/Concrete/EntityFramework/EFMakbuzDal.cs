@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,34 +10,34 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EFMakbuzDal : IMakbuzDal
+    public class EFMakbuzDal : EFEntityRepositoryBase<Fis, NorthwindContext>, IMakbuzDal
     {
-        public void Add(Makbuz entity)
+        public void Add(Fis entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Makbuz entity)
+        public void Delete(Fis entity)
         {
             throw new NotImplementedException();
         }
 
-        public Makbuz Get()
+        public Fis Get()
         {
             throw new NotImplementedException();
         }
 
-        public List<Makbuz> GetAll(Expression<Func<Makbuz, bool>> filter = null)
+        public List<Fis> GetAll(Expression<Func<Fis, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
 
-        public List<Makbuz> GetAllById(int id)
+        public List<Fis> GetAllById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Makbuz entity)
+        public void Update(Fis entity)
         {
             throw new NotImplementedException();
         }

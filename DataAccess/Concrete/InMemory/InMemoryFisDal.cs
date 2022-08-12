@@ -16,10 +16,10 @@ namespace DataAccess.Concrete.InMemory
         {
             _fisler = new List<Fis>
              {
-                new Fis{FisId="1"},
-                new Fis{FisId="2"},
-                new Fis{FisId="3"},
-                new Fis{FisId="4"},
+                new Fis{FisId=1},
+                new Fis{FisId=2},
+                new Fis{FisId=3},
+                new Fis{FisId=4},
 
              };
         }
@@ -33,6 +33,8 @@ namespace DataAccess.Concrete.InMemory
             Fis fisToDelete = _fisler.SingleOrDefault(f=>f.FisId == fis.FisId);
             _fisler.Remove(fisToDelete);   
         }
+
+        
 
         public Fis Get()
         {
@@ -49,15 +51,11 @@ namespace DataAccess.Concrete.InMemory
             throw new NotImplementedException();
         }
 
-        public List<Fis> GetAllById(string id)
+        public List<Fis> GetAllById(int id)
         {
             return _fisler.Where(f =>f.FisId==id).ToList();
         }
 
-        public List<Fis> GetAllById(int id)
-        {
-            throw new NotImplementedException();
-        }
 
         public void Update(Fis fis)
         {
@@ -71,5 +69,7 @@ namespace DataAccess.Concrete.InMemory
             fisToUpdate.Kdv= fis.Kdv;
             fisToUpdate.ToplamFis= fis.ToplamFis;
         }
+
+      
     }
 }

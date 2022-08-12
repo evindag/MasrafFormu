@@ -16,5 +16,6 @@ namespace DataAccess.Concrete.EntityFramework
         }
         public DbSet<Fis> Fisler { get; set; }
         public DbSet<Makbuz> Makbuzlar { get; set; }
+        public DbSet<Personel> Personeller { get; set; }
     }
 }

@@ -8,14 +8,21 @@ namespace ConsolUI
     {
         static void Main(string[] args)
         {
+            // FisTest();
+            MakbuzYönetimi makbuzYönetimi = new MakbuzYönetimi(new EFMakbuzDal());
+            foreach (var makbuz in makbuzYönetimi.GetAll())
+            {
+                Console.WriteLine(makbuz.FirmaAdi);
+            }
+        }
+
+        private static void FisTest()
+        {
             FisYonetimi fisYonetimi = new FisYonetimi(new EFFisDal());
             foreach (var fis in fisYonetimi.GetAll())
-            //foreach (var fis in fisYonetimi.GetAllByFisId(2))
-            //foreach (var fis in fisYonetimi.GetAllByFisId(2,5))
             {
                 Console.WriteLine(fis.FisId);
-                //Console.WriteLine(fis.FisTuru);
-                //Console.WriteLine(fis.BelgeTarihi);
+
             }
         }
     }

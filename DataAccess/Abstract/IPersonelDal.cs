@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface IMakbuzDal:IEntityRepository<Makbuz>
+    internal interface IPersonelDal:IEntityRepository<Personel>
     {
-      
     }
 }
