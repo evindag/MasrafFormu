@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,11 @@ namespace DataAccess.Concrete.InMemory
             throw new NotImplementedException();
         }
 
+        public Fis Get(Expression<Func<Fis, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Fis> GetAll()
         {
             return _fisler;
@@ -56,6 +62,10 @@ namespace DataAccess.Concrete.InMemory
             return _fisler.Where(f =>f.FisId==id).ToList();
         }
 
+        public List<FisDetailDto> GetFisDetails()
+        {
+            throw new NotImplementedException();
+        }
 
         public void Update(Fis fis)
         {

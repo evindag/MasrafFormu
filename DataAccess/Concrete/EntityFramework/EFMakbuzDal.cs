@@ -1,4 +1,5 @@
-﻿using Core.DataAccess.EntityFramework;
+﻿using Core.DataAccess;
+using Core.DataAccess.EntityFramework;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -10,34 +11,34 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EFMakbuzDal : EFEntityRepositoryBase<Fis, NorthwindContext>, IMakbuzDal
+    public class EFMakbuzDal : EFEntityRepositoryBase<Fis, MasrafDbContext>, IMakbuzDal
     {
-        public void Add(Fis entity)
+    
+
+        public void Add(Makbuz entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Fis entity)
+        public void Delete(Makbuz entity)
+        {
+            throw new NotImplementedException();
+        }
+        public Makbuz Get(Expression<Func<Makbuz, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+        public List<Makbuz> GetAll(Expression<Func<Makbuz, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
 
-        public Fis Get()
+        public void Update(Makbuz entity)
         {
             throw new NotImplementedException();
         }
 
-        public List<Fis> GetAll(Expression<Func<Fis, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Fis> GetAllById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Fis entity)
+        List<Makbuz> IEntityRepository<Makbuz>.GetAllById(int id)
         {
             throw new NotImplementedException();
         }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EFPersonelDal : EFEntityRepositoryBase<Personel, NorthwindContext>, IPersonelDal
+    public class EFPersonelDal : EFEntityRepositoryBase<Personel, MasrafDbContext>, IPersonelDal
     {
     }
 }

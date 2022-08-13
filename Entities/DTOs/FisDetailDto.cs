@@ -1,15 +1,15 @@
-﻿using Core.Entities;
+﻿using Core.Entites;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Concrete
+namespace Entities.DTOs
 {
-    public class Fis:IEntity
+    public class FisDetailDto : IDto
     {
-        public int FisId { get; set; } 
+        public int FisId { get; set; }
         public string BelgeTarihi { get; set; }
         public string FisNo { get; set; }
         public string Firma { get; set; }
@@ -19,5 +19,6 @@ namespace Entities.Concrete
         public double Kdv { get; set; }
         public byte[] Gorsel { get; set; }
         public string Kisi { get; set; }
-    }
+
+    }    
 }

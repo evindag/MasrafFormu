@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Core.DataAccess.EntityFramework
 {
@@ -43,17 +42,14 @@ namespace Core.DataAccess.EntityFramework
             }
         }
 
-        public TEntity Get()
+        public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter =null)
         {
-            throw new NotImplementedException();
-        }
+            
 
-        public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
-        {
             using (TContext context = new TContext())
             {
                 return filter == null ? context.Set<TEntity>().ToList()
-                    : context.Set<TEntity>().Where(filter).ToList();
+                : context.Set<TEntity>().Where(filter).ToList();
                 //Select*From Fis
             }
         }
