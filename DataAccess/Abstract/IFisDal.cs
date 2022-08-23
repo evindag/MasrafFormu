@@ -1,5 +1,4 @@
-﻿using Core.DataAccess;
-using DataAccess.Concrete.EntityFramework;
+﻿using Core.DataAccess.Databases.MongoDB;
 using Entities.Concrete;
 using Entities.DTOs;
 using System;

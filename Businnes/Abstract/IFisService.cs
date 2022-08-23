@@ -11,14 +11,14 @@ namespace Businnes.Abstract
 {
     public interface IFisService
     {
-        List<Fis> GetAll();
-        List<Fis> GetAllFisId(int id);
-        List<Fis> GetByBelgeTarihi(decimal min,decimal max);
-        List<Fis> GetByFisTuru(string name);   
-        List<Fis> GetByKisi(string name);
-        Fis GetById(int id);
+        IDataResult<List<Fis>> GetAll();
+        IDataResult<List<Fis>> GetAllFisId(int id);
+        IDataResult<List<Fis>> GetByBelgeTarihi(string min,string max);
+        IDataResult<List<Fis>> GetByFisTuru(string name);
+        IDataResult<List<Fis>> GetByKisi(string name);
+        IDataResult<Fis> GetById(int id);
         IResult Add(Fis fis);
 
-        List<FisDetailDto> GetFisDetails();
+        IDataResult<List<FisDetailDto>> GetFisDetails();
     }
 }

@@ -1,13 +1,14 @@
 ﻿using Businnes.Abstract;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using System.Collections.Generic;
 
 namespace Businnes.Concrete
 {
-    public class MakbuzYönetimi : IMakbuzService
+    public class MakbuzYonetimi : IMakbuzService
     {
         IMakbuzDal _makbuzDal;
-        public MakbuzYönetimi(IMakbuzDal makbuzDal)
+        public MakbuzYonetimi(IMakbuzDal makbuzDal)
         {
             _makbuzDal = makbuzDal;
         }

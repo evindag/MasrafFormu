@@ -1,4 +1,6 @@
 ﻿using Core.Entities;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,9 @@ namespace Entities.Concrete
 {
     public class Makbuz:IEntity
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
         public int MakbuzId { get; set; }
         public int Tarih { get; set; }
         public double MakbuzTutari { get; set; }

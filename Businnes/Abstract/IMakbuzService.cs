@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace Businnes.Abstract
     {
         List<Makbuz> GetAll();
         Makbuz GetById(int id);
+        IResult Add (Makbuz makbuz);
     }
 }
