@@ -11,5 +11,6 @@ namespace Businnes.Constants
         public static string FisNameInvalid = "Fiş ismi geçersiz";
         public  static string  MaintenanceTime = "Şuan sistem bakımdadır.";
         public static string FisListed = "Fişler Listelendi";
+        public static string FisAdded = "Fis Eklendi";
     }
 }

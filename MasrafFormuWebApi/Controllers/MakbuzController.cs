@@ -1,6 +1,7 @@
 ﻿using Businnes.Abstract;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace MasrafFormuWebApi.Controllers
 {
@@ -23,6 +24,13 @@ namespace MasrafFormuWebApi.Controllers
                 return Ok(result);
             }
             return BadRequest(result.Message);
+        }
+        [HttpGet("getall")]
+        public List<Makbuz> GetList()
+        {
+
+            var result = _makbuzService.GetAll();
+            return result;
         }
     }
 }

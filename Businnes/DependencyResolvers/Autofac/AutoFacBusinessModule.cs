@@ -4,6 +4,7 @@ using Businnes.Abstract;
 using Businnes.Concrete;
 using Castle.DynamicProxy;
 using Core.Utilities.InterCeptors;
+using DataAccess.Concrete.MongoDB;
 
 namespace Business.DependencyResolvers.Autofac
 {
@@ -14,6 +15,7 @@ namespace Business.DependencyResolvers.Autofac
 
 
             builder.RegisterType<FisYonetimi>().As<IFisService>().SingleInstance();
+            builder.RegisterType<MongoDB_FisDal>().As<IMakbuzService>().SingleInstance();
             builder.RegisterType<MakbuzYonetimi>().As<IMakbuzService>().SingleInstance();
 
 

@@ -1,9 +1,13 @@
 ﻿using Businnes.Abstract;
 using Businnes.Constants;
+using Businnes.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 
@@ -17,27 +21,30 @@ namespace Businnes.Concrete
         {
             _fisDal = fisDal;
         }
-
+        [ValidationAspect(typeof(FisValidator))]
         public IResult Add(Fis fis)
-
         {
-            if (fis.Firma.Length < 2)
-            {
-                return new ErrorResult(Messages.FisNameInvalid);
-            }
+            ValidationTool.Validate(new FisValidator(), fis);
             _fisDal.Add(fis);
-            return new SuccessResult(Messages.FirmaAdded);
+            return new SuccessResult(Messages.FisAdded);
         }
+
+       
 
         public IDataResult<List<Fis>> GetAll()
-            
         {
-            if (DateTime.Now.Hour==22)
-            {
-                return new ErrorDataResult<List<Fis>>(Messages.MaintenanceTime);
-            }
-            return new SuccessDataResult<List<Fis>>(_fisDal.GetAll(),Messages.FisListed);
+            throw new NotImplementedException();
         }
+
+        //public IDataResult<List<Fis>> GetAll();
+
+        //{
+        ////    if (DateTime.Now.Hour==22)
+        ////    {
+        ////        return new ErrorDataResult<List<Fis>>(Messages.MaintenanceTime);
+        ////    }
+        ////    return new SuccessDataResult<List<Fis>>(_fisDal.GetAll(),Messages.FisListed);
+        ////}
 
         public IDataResult<List<Fis>> GetAllFisId(int id)
         {

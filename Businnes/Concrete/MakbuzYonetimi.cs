@@ -1,4 +1,5 @@
 ﻿using Businnes.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System.Collections.Generic;
@@ -12,7 +13,13 @@ namespace Businnes.Concrete
         {
             _makbuzDal = makbuzDal;
         }
-    
+
+        public IResult Add(Makbuz makbuz)
+        {
+            _makbuzDal.Add(makbuz);
+            return new SuccessResult();
+        }
+
         public List<Makbuz> GetAll()
         {
             return _makbuzDal.GetAll();
