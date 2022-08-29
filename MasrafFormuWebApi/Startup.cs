@@ -1,5 +1,5 @@
-using Businnes.Abstract;
-using Businnes.Concrete;
+using Business.Abstract;
+using Business.Concrete;
 using DataAccess.Abstract;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

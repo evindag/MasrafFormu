@@ -1,5 +1,5 @@
 ﻿using Core.DataAccess.Databases.MongoDB;
-using Core.Entities;
+using Core.Entites.Abstract;
 using DataAccess.Concrete.Databases.MongoDB.Collections;
 using MongoDB.Driver;
 using System;

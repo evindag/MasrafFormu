@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.MongoDB
 {
-    public class MongoDB_MakbuzDal : MongoDB_RepositoryBase<Makbuz, MongoDB_Context<Makbuz, MongoDB_MakbuzCollection>>, IMakbuzDal
+    public class MongoDB_CheckDal : MongoDB_RepositoryBase<Check, MongoDB_Context<Check, MongoDB_CheckCollection>>, ICheckDal
     {
     }
 }

@@ -1,9 +1,10 @@
 ﻿using Autofac;
 using Autofac.Extras.DynamicProxy;
-using Businnes.Abstract;
-using Businnes.Concrete;
+using Business.Abstract;
+using Business.Concrete;
 using Castle.DynamicProxy;
 using Core.Utilities.InterCeptors;
+using DataAccess.Abstract;
 using DataAccess.Concrete.MongoDB;
 
 namespace Business.DependencyResolvers.Autofac
@@ -14,9 +15,10 @@ namespace Business.DependencyResolvers.Autofac
         {
 
 
-            builder.RegisterType<FisYonetimi>().As<IFisService>().SingleInstance();
-            builder.RegisterType<MongoDB_FisDal>().As<IMakbuzService>().SingleInstance();
-            builder.RegisterType<MakbuzYonetimi>().As<IMakbuzService>().SingleInstance();
+            builder.RegisterType<ReceiptManager>().As<IReceiptService>().SingleInstance();
+            builder.RegisterType<MongoDB_ReceiptDal>().As<IReceiptDal>().SingleInstance();
+            builder.RegisterType<CheckManager>().As<ICheckService>().SingleInstance();
+            builder.RegisterType<MongoDB_CheckDal>().As<ICheckDal>().SingleInstance();
 
 
 

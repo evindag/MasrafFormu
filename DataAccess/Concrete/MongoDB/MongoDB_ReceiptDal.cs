@@ -3,6 +3,7 @@ using DataAccess.Abstract;
 using DataAccess.Concrete.Databases.MongoDB;
 using DataAccess.Concrete.MongoDB.Collections;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,11 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.MongoDB
 {
-    public class MongoDB_PersonelDal:MongoDB_RepositoryBase<Personel, MongoDB_Context<Personel, MongoDB_PersonelCollection>>, IPersonelDal
+    public class MongoDB_ReceiptDal : MongoDB_RepositoryBase<Receipt, MongoDB_Context<Receipt, MongoDB_ReceiptCollection>>, IReceiptDal
     {
-    
+        public List<ReceiptDetailDto> GetReceiptDetails()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Businnes.Abstract
+namespace Business.Abstract
 {
-    public interface IMakbuzService
+    public interface ICheckService
     {
-        List<Makbuz> GetAll();
-        Makbuz GetById(int id);
-        IResult Add (Makbuz makbuz);
+        IDataResult<List<Check>> GetAll();
+        IDataResult<Check> GetById(string id);
+        IResult Add (Check check);
     }
 }

@@ -1,7 +1,8 @@
-﻿using Businnes.Abstract;
-using Businnes.Concrete;
+﻿using Business.Abstract;
+using Business.Concrete;
 using DataAccess.Concrete.MongoDB;
 using Entities.Concrete;
+using Entities.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -9,18 +10,21 @@ namespace MasrafFormuWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FisController : ControllerBase
+    public class ReceiptController : ControllerBase
     {
-        private readonly IFisService _fisService;
-        public FisController(IFisService fisService)
+        private readonly IReceiptService _receiptService;
+        public ReceiptController(IReceiptService receiptService)
         {
-            _fisService = fisService;
+            _receiptService = receiptService;
 
         }
         [HttpPost("Add")]
-        public IActionResult Add(Fis fis)
+        public IActionResult Add(ReceiptDetailDto receipt)
         {
-            var result = _fisService.Add(fis);
+            Receipt receipt1 = new Receipt { Company = receipt.Company, Date = receipt.Date, 
+                Description = receipt.Description, Image = receipt.Image, Person = receipt.Person,
+                ReceiptNo = receipt.ReceiptNo,ReceiptType = receipt.ReceiptType,TotalCost = receipt.TotalCost,Vat = receipt.Vat };
+            var result = _receiptService.Add(receipt1);
             if (result.Success)
             {
                 return Ok(result);
@@ -38,7 +42,7 @@ namespace MasrafFormuWebApi.Controllers
         [HttpGet("GetAll")]
         public IActionResult Get()
         {
-            var result = _fisService.GetAll();
+            var result = _receiptService.GetAll();
             if (result.Success)
             {
                 return Ok(result);
@@ -47,9 +51,9 @@ namespace MasrafFormuWebApi.Controllers
         }
 
         [HttpGet("GetById")]
-        public IActionResult Get(int id)
+        public IActionResult Get(string id)
         {
-            var result= _fisService.GetById(id);
+            var result= _receiptService.GetById(id);
             if (result.Success)
             {
                 return Ok(result);

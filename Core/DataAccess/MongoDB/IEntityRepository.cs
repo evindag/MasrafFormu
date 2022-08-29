@@ -1,4 +1,4 @@
-﻿using Core.Entities;
+﻿using Core.Entites.Abstract;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;

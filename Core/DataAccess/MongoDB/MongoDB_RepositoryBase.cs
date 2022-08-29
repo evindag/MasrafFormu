@@ -1,10 +1,10 @@
-﻿using Core.Entities;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using Core.DataAccess.Databases.MongoDB;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using Core.Entites.Abstract;
 
 namespace Core.DataAccess.Databases.MongoDB
 {

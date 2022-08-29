@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Entities
+namespace Core.Entites.Abstract
 {
-    public interface IEntity
+    public interface IDto
     {
-        string Id { get; set; }
+
     }
 }

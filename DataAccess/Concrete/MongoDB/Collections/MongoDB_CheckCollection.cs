@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.MongoDB.Collections
 {
-    public class MongoDB_MakbuzCollection : ICollection
+    public class MongoDB_CheckCollection : ICollection
     {
         public string CollectionName { get; set ; }
-        public MongoDB_MakbuzCollection()
+        public MongoDB_CheckCollection()
         {
-            CollectionName = "Makbuzlar";
+            CollectionName = "Checks";
         }
     }
 }

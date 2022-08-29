@@ -3,14 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Businnes.Constants
+namespace Business.Constants
 {
     public class Messages
     {
-        public static string FirmaAdded = "Firma Eklendi";
-        public static string FisNameInvalid = "Fiş ismi geçersiz";
+        public static string CompanyAdded = "Firma Eklendi";
+        public static string ReceiptNameInvalid = "Fiş ismi geçersiz";
         public  static string  MaintenanceTime = "Şuan sistem bakımdadır.";
-        public static string FisListed = "Fişler Listelendi";
-        public static string FisAdded = "Fis Eklendi";
+        public static string ReceiptListed = "Fişler Listelendi";
+        public static string ReceiptAdded = "Fis Eklendi";
+        public static string ReceiptNoAlreadyExists="Bu koda ait bir fiş zaten var";
     }
 }

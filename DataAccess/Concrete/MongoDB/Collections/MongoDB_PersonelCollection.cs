@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.MongoDB.Collections
         public string CollectionName { get ; set ; }
         public MongoDB_PersonelCollection()
         {
-            CollectionName = "Personeller";
+            CollectionName = "Employee";
         }
     }
 }
