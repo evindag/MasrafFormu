@@ -18,7 +18,11 @@ namespace Business.Abstract
         IDataResult<List<Receipt>> GetByPerson(string name);
         IDataResult<Receipt> GetById(string id);
         IResult Add(Receipt receipt);
-
+        IResult Update(Receipt receipt);
+        IResult Delete(string id);  
         IDataResult<List<ReceiptDetailDto>> GetReceiptDetails();
+        IResult AddTransactionalTest(Receipt receipt);
+
+       
     }
 }

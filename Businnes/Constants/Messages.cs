@@ -1,6 +1,7 @@
 ﻿using Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constants
@@ -13,5 +14,9 @@ namespace Business.Constants
         public static string ReceiptListed = "Fişler Listelendi";
         public static string ReceiptAdded = "Fis Eklendi";
         public static string ReceiptNoAlreadyExists="Bu koda ait bir fiş zaten var";
+        public static string AuthorizationDenied = "Buna yetkiniz yok.";
+
+        public static string ReceiptDeleted ="Fiş Silindi";
+        public static string ReceiptUpdated = "Güncellendi"; 
     }
 }

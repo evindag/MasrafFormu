@@ -5,6 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Castle.DynamicProxy;
+using Core.Extensions;
+using Microsoft.AspNetCore.Http;
+using Business.Constants;
 
 namespace Business.BusinessAspects.Autofac
 {

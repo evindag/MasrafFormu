@@ -11,7 +11,9 @@ namespace Business.Abstract
     public interface ICheckService
     {
         IDataResult<List<Check>> GetAll();
+        IDataResult<List<Check>> GetAllCheckId(string id);
         IDataResult<Check> GetById(string id);
         IResult Add (Check check);
+
     }
 }

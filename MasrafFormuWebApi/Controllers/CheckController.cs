@@ -28,12 +28,22 @@ namespace MasrafFormuWebApi.Controllers
             }
             return BadRequest(result.Message);
         }
-        [HttpGet("getall")]
+        [HttpGet("GetAll")]
         public IActionResult GetList()
         {
 
             var result = _checkService.GetAll();
             return Ok(result);
+        }
+        [HttpGet("GetById")]
+        public IActionResult Get(string id)
+        {
+            var result = _checkService.GetById(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
         }
     }
 }
